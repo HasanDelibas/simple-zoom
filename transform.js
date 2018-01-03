@@ -8,7 +8,7 @@ Node.prototype.zoom = function(value){
         
         return this._zoom == null ? 1 : this._zoom;
     }else{
-        this._zoom = value;
+        this._zoom = parseFloat(value);
         if(this.style.transform.match(/scale/i) == null){
             this.style.transform += ' scale('+this._zoom+')';
         }else{
@@ -27,7 +27,7 @@ Node.prototype.rotate = function(value){
         
         return this._rotate == null ? 0 : this._rotate;
     }else{
-        this._rotate = value;
+        this._rotate = parseFloat(value);
         if(this.style.transform.match(/rotate/i) == null){
             this.style.transform += ' rotate('+this._rotate+'deg)';
         }else{
