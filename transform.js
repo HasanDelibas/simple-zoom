@@ -34,5 +34,5 @@ Node.prototype.rotate = function(value){
             this.style.transform =this.style.transform.replace(/rotate\([0-9\.\s]+deg\)/i,"rotate("+this._rotate+"deg)");
         }
     }
-    return this._zoom;
+    return this._rotate;
 }
